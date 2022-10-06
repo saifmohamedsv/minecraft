@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore } from "./useStore";
+import { useStore } from "../hooks/useStore";
 import Cube from "./Cube";
 
 export const Cubes = () => {

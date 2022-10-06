@@ -12,7 +12,14 @@ export const useStore = create((set) => ({
       ],
     }));
   },
-  removeCube: () => {},
+  removeCube: (x, y, z) => {
+    set((prev) => ({
+      cubes: prev.cubes.filter((c) => {
+        const [X, Y, Z] = c.pos;
+        return X !== x || Y !== y || Z !== z;
+      }),
+    }));
+  },
   setTexture: (texture) => {},
   saveWorld: () => {},
   resetWorld: () => {},
