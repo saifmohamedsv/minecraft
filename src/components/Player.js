@@ -11,7 +11,6 @@ const Player = () => {
   const actions = useKeyboard();
   const { camera } = useThree();
 
-  console.log(Object.entries(actions).filter(([k, v]) => v));
   const [ref, api] = useSphere(() => ({
     mass: 1,
     type: "Dynamic",
